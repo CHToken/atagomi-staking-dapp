@@ -4,7 +4,7 @@ import Cards from "../../components/Cards/Cards";
 
 function StakingPage() {
   return (
-    <div className={s.root}>
+    <div>
       <NewInfo />
       <Cards />
     </div>
