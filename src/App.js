@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<StakingPage />} />
       </Routes>
       <Footer />
-    </div> 
+    </div>
   );
 }
 
