@@ -1,0 +1,62 @@
+.root {
+  @apply w-full flex flex-col items-center justify-center mt-12;
+
+  .cardsWrapper {
+    @apply flex flex-wrap w-[320px] md:w-[640px] lg:w-[960px] xl:w-[1280px] justify-center;
+    .card {
+      @apply relative w-[350px] mt-[40px] mb-0 mx-[15px] border-2 border-solid border-[#121218] bg-[#121218] rounded-[8px] p-[16px] cursor-pointer;
+      transition: box-shadow 0.25s ease-out 0s, border 0.25s ease-out 0s;
+      .cardTop {
+        width: calc(100% + 32px);
+        margin: -16px -16px 0px;
+        padding: 16px;
+        border-radius: 8px 8px 0px 0px;
+        height: 120px;
+      }
+      .bnb {
+        background: linear-gradient(
+            90deg,
+            rgba(240, 185, 11, 0.02) 1.04%,
+            rgba(14, 87, 222, 0.299) 98.99%
+          )
+          0% 0% / 200% 200%;
+      }
+      .cardContent {
+        .svgIcon {
+          @apply rounded-full w-[56px] h-[56px] mt-[-28px];
+          box-shadow: rgb(18, 18, 24) 0px 0px 0px 2px;
+        }
+        .apyInfoWrapper {
+          @apply absolute top-[-281px] left-[-140px] w-[280px] h-[280px] bg-[#121218] rounded-[10px] border border-[#1c1c22] p-[16px];
+        }
+        .amountInput {
+          @apply w-full;
+          & input {
+            @apply text-white;
+            &:focus-visible {
+              @apply outline-none;
+            }
+          }
+          &:focus-visible {
+            @apply outline-none;
+          }
+          & > div {
+            @apply border-solid border-[2px] border-[#2c374b] outline-none;
+          }
+        }
+        .connectWallet {
+          @apply w-full flex justify-center items-center uppercase bg-[#16ceb914] font-normal text-base h-[48px] text-[#16ceb9] px-[12px] rounded-[8px];
+          &:hover {
+            @apply opacity-[0.64];
+          }
+        }
+      }
+    }
+    .bnbCard {
+      &:hover {
+        box-shadow: rgba(14, 87, 222, 0.4) 0px 0px 70px;
+        border: 2px solid rgb(14, 87, 222);
+      }
+    }
+  }
+}
